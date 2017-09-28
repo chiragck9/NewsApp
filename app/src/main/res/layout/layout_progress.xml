@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.chk.newsapp.data.api.utils.Resource"></import>
+
+        <import type="com.chk.newsapp.data.api.utils.Status"></import>
+
+        <variable
+            name="resource"
+            type="com.chk.newsapp.data.api.utils.Resource"></variable>
+    </data>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:visiblity="@{resource.status == Status.LOADING}" />
+
+</layout>

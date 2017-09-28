@@ -1,0 +1,88 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "26.0.0"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 26
+    androidCompileSdkVersion = 26
+    versionCode = 1
+    versionName = "1.0.0"
+
+    //Libraries
+    supportLibraryVersion = "26.1.0"
+    daggerVersion = '2.11'
+    rxJavaVersion = '2.1.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    architectureComponentsVersion = '1.0.0-alpha9-1'
+    kotlin_version = '1.1.3-2'
+    retrofitVersion = '2.3.0'
+    retrofitGsonConverterVersion = '2.1.0'
+    retrofitAdapterVersion = '2.1.0'
+    gsonVersion = '2.6.2'
+    okHttpVersion = '2.5.0'
+    multiDexVersion = '1.0.1'
+    timberVersion = '4.5.1'
+    frescoVersion = '1.5.0'
+    bottomNavigationVersion = '1.2.1'
+
+    //Testing
+    robolectricVersion = '3.0'
+    jUnitVersion = '4.12'
+    assertJVersion = '3.4.1'
+    mockitoVersion = '1.10.19'
+    dexmakerVersion = '1.0'
+    espressoVersion = '3.0.0'
+    testingSupportLibVersion = '0.1'
+    javaxInjectVersion = '1'
+
+
+    appDependencies = [
+            supportLibrary        : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            designLibrary         : "com.android.support:design:${supportLibraryVersion}",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            dagger                : "com.google.dagger:dagger:${daggerVersion}",
+            daggerAndroid         : "com.google.dagger:dagger-android:${daggerVersion}",
+            daggerAndroidSupport  : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            okHttp                : "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            gson                  : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava                : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation       : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            recyclerView          : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            cardView              : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            lifecycleRuntime      : "android.arch.lifecycle:runtime:${architectureComponentsVersion}",
+            lifecycleExtensions   : "android.arch.lifecycle:extensions:${architectureComponentsVersion}",
+            lifecycleCompiler     : "android.arch.lifecycle:compiler:${architectureComponentsVersion}",
+            roomDB                : "android.arch.persistence.room:runtime:${architectureComponentsVersion}",
+            roomDBCompiler        : "android.arch.persistence.room:compiler:${architectureComponentsVersion}",
+            kotlinStdLibJre       : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlin_version}",
+            retrofit              : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:${retrofitGsonConverterVersion}",
+            retrofitAdapter       : "com.squareup.retrofit2:adapter-rxjava:${retrofitAdapterVersion}",
+            okHttp                : "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            javaxInject           : "javax.inject:javax.inject:${javaxInjectVersion}",
+            multiDex              : "com.android.support:multidex:${multiDexVersion}",
+            timber                : "com.jakewharton.timber:timber:${timberVersion}",
+            fresco                : "com.facebook.fresco:fresco:${frescoVersion}",
+            bottomNavigation      : "com.github.ittianyu:BottomNavigationViewEx:${bottomNavigationVersion}"
+    ]
+    testDependencies = [
+            junit            : "junit:junit:${jUnitVersion}",
+            assertj          : "org.assertj:assertj-core:${assertJVersion}",
+            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric      : "org.robolectric:robolectric:${robolectricVersion}",
+            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+            assertj          : "org.assertj:assertj-core:${assertJVersion}",
+    ]
+}
